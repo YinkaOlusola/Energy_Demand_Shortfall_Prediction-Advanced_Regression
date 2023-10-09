@@ -7,3 +7,8 @@
    width=450px/>
    <br>
 </p>
+
+
+## Refernces
+
+Chris Barnett, ExploreAI Academy, Zintle Faltein. (2022). Spain Electricity Shortfall Challenge 2022. Kaggle. https://kaggle.com/competitions/spain-electricity-shortfall-challenge-2022
