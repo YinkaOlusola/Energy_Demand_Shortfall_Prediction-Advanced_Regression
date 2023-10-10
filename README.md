@@ -10,13 +10,6 @@ In this project, you are tasked to model the shortfall between the energy genera
 
 ![Electricity_Pylon](https://cdn.pixabay.com/photo/2019/01/06/13/07/electricity-pylon-3916954_960_720.jpg)
 
-<p align='center'>
-   <img src="assets/imgs/EDSA_logo.png"
-   alt='EXPLORE Data Science Academy Logo'
-   width=450px/>
-   <br>
-</p>
-
 
 ## Refernces
 
