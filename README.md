@@ -66,6 +66,15 @@ During the model training, we identified features that contributed the most to t
 The evaluation metric for the Kaggle competition was Root Mean Square Error is commonly used in regression analysis and forecasting. It measures the standard deviation of the residuals arising between predicted and actual observed values for a modeling process.
 
 
+## Kaggle Submission
+
+The random forest model was used to make a submission on Kaggle for the ![Spain Electricity Shortfall challenge](https://www.kaggle.com/competitions/spain-electricity-shortfall-challenge-2022/leaderboard) where my team was able to attain an 8th position on the leaderboard after a lot of fine-tuning of the model.
+
+
+## Model Deployment
+
+Using a Flask
+
 ## References
 
 Chris Barnett, ExploreAI Academy, Zintle Faltein. (2022). Spain Electricity Shortfall Challenge 2022. Kaggle. https://kaggle.com/competitions/spain-electricity-shortfall-challenge-2022
