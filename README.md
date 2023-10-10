@@ -59,21 +59,33 @@ The dataset contains 47 features and 1 target. The features include the time and
 
 ## Feature Engineering and Model Training
 
-During the model training, we identified features that contributed the most to the target variable by conducting different Statistical analysis some of which involved the test for multicollinearity and level of significance. The random forest gave the best performance among the tested models and was as such selected.
+ - Split the train dataset by city to have a view of the impact of city-specific features.
+ - Evaluated the correlation of the different features with the output variable.
+ - Checked for multicollinearity among the features.
+
+A train-test-split of 34% was used as it gave the best performance for the data. Linear regression, LASSO regression and Random forest regression were the three regression models that were trained on the data and the performance of all three models were assessed using RMSE and R2_score.
+
+The predicted three-hourly load shortfall had the following summary statistics:
+ - Mean load shortfall of 10,545kWh
+ - A maximum load shortfall of 20,492kWh
+ - A negative minimum load shortfall of 257kWh
+ - The Median load shortfall is 10,891kWh
 
 ## Model Evaluation
 
 The evaluation metric for the Kaggle competition was Root Mean Square Error is commonly used in regression analysis and forecasting. It measures the standard deviation of the residuals arising between predicted and actual observed values for a modeling process.
 
+After comparison of the different models, random forest was selected as it gave the best performance among the tested models using the RMSE.
+
 
 ## Kaggle Submission
 
-The random forest model was used to make a submission on Kaggle for the ![Spain Electricity Shortfall challenge](https://www.kaggle.com/competitions/spain-electricity-shortfall-challenge-2022/leaderboard) where my team was able to attain an 8th position on the leaderboard after a lot of fine-tuning of the model.
+The random forest model was used to make a submission on Kaggle for the [Spain Electricity Shortfall challenge](https://www.kaggle.com/competitions/spain-electricity-shortfall-challenge-2022/leaderboard) where my team was able to attain an 8th position on the leaderboard after a lot of fine-tuning of the model.
 
 
 ## Model Deployment
 
-Using a Flask
+We build an API using the Flask web server framework and then hosted the API within an Amazon EC2 Instance making the model readily available to be consumed.
 
 ## References
 
