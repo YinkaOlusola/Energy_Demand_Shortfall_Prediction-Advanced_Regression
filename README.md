@@ -10,6 +10,8 @@ In this project, you are tasked to model the shortfall between the energy genera
 
 ![Electricity_Pylon](images/electricity-pylon.jpg)
 
+<img src="images/electricity-pylon.jpg" alt="Image Description" height="200">
+
 
 ## Refernces
 
