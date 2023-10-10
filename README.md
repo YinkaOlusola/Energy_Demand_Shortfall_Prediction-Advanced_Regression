@@ -73,7 +73,7 @@ The predicted three-hourly load shortfall had the following summary statistics:
 
 ## Model Evaluation
 
-The evaluation metric for the Kaggle competition was Root Mean Square Error is commonly used in regression analysis and forecasting. It measures the standard deviation of the residuals arising between predicted and actual observed values for a modeling process.
+The evaluation metric for the Kaggle competition was Root Mean Square Error (RMSE) is commonly used in regression analysis and forecasting. It measures the standard deviation of the residuals arising between predicted and actual observed values for a modeling process.
 
 After comparison of the different models, random forest was selected as it gave the best performance among the tested models using the RMSE.
 
