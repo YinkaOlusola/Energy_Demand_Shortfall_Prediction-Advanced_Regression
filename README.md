@@ -1,4 +1,4 @@
-# Spain Energy Shortfall
+# Spain Electricity Shortfall Prediction Challenge
 
 ## Overview
 
@@ -57,7 +57,7 @@ The dataset contains 47 features and 1 target. The features include the time and
  - temp
 
 
-# Feature Engineering and Model Training
+## Feature Engineering and Model Training
 
 During the model training, we identified features that contributed the most to the target variable by conducting different Statistical analysis some of which involved the test for multicollinearity and level of significance. The random forest gave the best performance among the tested models and was as such selected.
 
