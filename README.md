@@ -7,6 +7,7 @@ The availability of electricity significantly impacts the well-being of a nation
 <br>
 
 <img src="images/electricity-pylon.jpg" alt="Image Description" width ="800" height="400">
+Figure 1
 
 <br>
 
@@ -59,7 +60,7 @@ The dataset contains 47 features and 1 target. The features include the time and
 <br>
 
  <img src="images/load_shortfall_per_week.JPG" alt="Image Description" width ="800" height="400">
-
+                Figure 2: Three-Hourly Load Shortfall per Week.
 <br>
 
  From the Exploratory Data Analysis, the weekly three-hourly load shortfall tend to show a trend which is observable in the monthly data as well as shown in the figure below
@@ -67,6 +68,7 @@ The dataset contains 47 features and 1 target. The features include the time and
 <br>
 
  <img src="images/load_shortfall_per_month.JPG" alt="Image Description" width ="800" height="400">
+                Figure 2: Three-Hourly Load Shortfall per Month.
 
 <br>
 
@@ -79,10 +81,24 @@ The dataset contains 47 features and 1 target. The features include the time and
 <br>
 
 <img src="images/pairwise_corr_all_features.png" alt="Image Description" width ="800" height="400">
+                    Figure 4: Pairwise correlation of Independent variables using Heatmap.
 
 The image above is a heatmap showing the pairwise correlation between all independent variables and it can be seen that there are traces of multicollinearity.
 
+<br>
 
+<img src="images/pairwise_corr.png" alt="Image Description" width ="800" height="400">
+                    Figure 5: Heatmap of Highly correlated Independent variables
+
+<br>
+
+<img src="images/lineplots.png" alt="Image Description" width ="800" height="400">
+                    Figure 6: Lineplots of Highly correlated Independent variables
+
+<br>
+
+From the Figure 5 and Figure 6, the temperature features can be seen to follow similar trends and therefore exhibit high multicollinearity.
+This problem of high multicollinearity was later resolved using Variance Inflation Factor (VIF).
 
 A train-test-split of 34% was used as it gave the best performance for the data. Linear regression, LASSO regression and Random forest regression were the three regression models that were trained on the data and the performance of all three models were assessed using RMSE and R2_score.
 
@@ -96,7 +112,13 @@ The predicted three-hourly load shortfall had the following summary statistics:
 
 The evaluation metric for the Kaggle competition was Root Mean Square Error (RMSE) which is commonly used in regression analysis and forecasting. It measures the standard deviation of the residuals arising between predicted and actual observed values for a modeling process.
 
-After comparison of the different models, random forest was selected as it gave the best performance among the tested models using the RMSE.
+<br>
+
+The r-squared score was used to track the performance of the model during model training. The R-squared score is a statistical measure used in regression analysis to assess the goodness of fit of a regression model. It quantifies the proportion of the variance in the dependent variable (the target) that is explained by the independent variables (the predictors) in the model.
+
+The R2 score typically ranges from 0 to 1,
+
+After comparison of the different models which is shown in the figure above, random forest was selected as it gave the best performance among the tested models using the RMSE.
 
 
 ## Kaggle Submission
