@@ -57,6 +57,16 @@ The dataset contains 47 features and 1 target. The features include the time and
  - temp
 
 
+ <img src="images/load_shortfall_per_week.JPG" alt="Image Description" width ="800" height="400">
+
+
+ From the Exploratory Data Analysis, the weekly three-hourly load shortfall tend to show a trend which is observable in the monthly data as well as shown in the figure below
+
+
+ <img src="images/electricity-pylon.jpg" alt="Image Description" width ="800" height="400">
+
+
+
 ## Feature Engineering and Model Training
 
  - Split the train dataset by city to have a view of the impact of city-specific features.
