@@ -114,9 +114,16 @@ The evaluation metric for the Kaggle competition was Root Mean Square Error (RMS
 
 <br>
 
-The r-squared score was used to track the performance of the model during model training. The R-squared score is a statistical measure used in regression analysis to assess the goodness of fit of a regression model. It quantifies the proportion of the variance in the dependent variable (the target) that is explained by the independent variables (the predictors) in the model.
+The r-squared score was used to track the performance of the model during training. The R-squared score is a statistical measure used in regression analysis to assess the goodness of fit of a regression model. It quantifies the proportion of the variance in the dependent variable (the target) that is explained by the independent variables (the predictors) in the model.
 
 The R2 score typically ranges from 0 to 1,
+
+<br>
+
+<img src="images/models_comparison.png" alt="Image Description" width ="800" height="400">
+                    Figure 7: Model Comparison.
+
+<br>
 
 After comparison of the different models which is shown in the figure above, random forest was selected as it gave the best performance among the tested models using the RMSE.
 
