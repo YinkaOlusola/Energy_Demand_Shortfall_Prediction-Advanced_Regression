@@ -59,7 +59,7 @@ def _preprocess_data(data):
 
     # ----------- Replace this code with your own preprocessing steps --------
 
-    feature_vector_df = feature_vector_df.drop(['Unnamed: 0'], axis = 1)
+    feature_vector_df = feature_vector_df.drop(['Unnamed: 0'], axis = 1) # Dropping the unnamed feature
     feature_vector_df['Valencia_pressure'] = feature_vector_df['Valencia_pressure'].fillna(feature_vector_df['Valencia_pressure'].mean())
     feature_vector_df['time'] = pd.to_datetime(feature_vector_df['time'])
 
@@ -76,21 +76,33 @@ def _preprocess_data(data):
     column_list = ['time', 'hour', 'Day','Month','Year','minute','second'] + list(feature_vector_df.columns[1:-6])
     feature_vector_df = feature_vector_df[column_list]
 
+    feature_vector_df.drop(columns=['second', 'minute'], inplace=True) # Dropping the second and minute features
+
     feature_vector_df['Valencia_wind_deg'] = feature_vector_df['Valencia_wind_deg'].str.extract('(\d+)')      # Extracting the digits from the values in the Valencia_wind_deg column
     feature_vector_df['Valencia_wind_deg'] = pd.to_numeric(feature_vector_df['Valencia_wind_deg'])            # Converting the extracted digits from the values in the Valencia_wind_deg column into numbers
     feature_vector_df['Seville_pressure'] = feature_vector_df['Seville_pressure'].str.extract('(\d+)')        # Extracting the digits from the values in the Seville_pressure column into numbers
     feature_vector_df['Seville_pressure'] = pd.to_numeric(feature_vector_df['Seville_pressure'])              # Converting the extracted digits in the Seville_pressure column into numbers into numbers
 
-    # Dropping the noise and features with weak correlation with response variable from the dataset
-    feature_vector_df = feature_vector_df.drop(['time', 'Month', 'minute', 'second', 'Madrid_temp_min','Seville_temp_min', 'Bilbao_temp_max','Bilbao_temp_min','Valencia_temp_max','Valencia_temp_min','Barcelona_temp_max','Barcelona_temp_min', 'Madrid_pressure', 'Valencia_pressure', 'Barcelona_weather_id', 'Seville_weather_id', 'Valencia_humidity', 'Bilbao_pressure', 'Madrid_weather_id', 'Valencia_snow_3h', 'Barcelona_rain_3h', 'Madrid_rain_1h', 'Seville_rain_1h', 'Bilbao_snow_3h', 'Seville_rain_3h', 'Barcelona_pressure', 'Seville_wind_speed', 'Barcelona_rain_1h', 'Bilbao_wind_speed', 'Madrid_clouds_all', 'Seville_clouds_all'], axis=1)
-
+    # Selecting the features to include in the dataframe to be passed into the model
+    final_features = ['hour', 'Day', 'Month', 'Year', 'Madrid_wind_speed', 
+                  'Valencia_wind_deg', 'Bilbao_rain_1h', 'Valencia_wind_speed', 
+                  'Seville_humidity', 'Madrid_humidity', 'Bilbao_clouds_all', 
+                  'Bilbao_wind_speed', 'Seville_clouds_all', 'Bilbao_wind_deg', 
+                  'Barcelona_wind_speed', 'Barcelona_wind_deg', 'Madrid_clouds_all', 
+                  'Seville_wind_speed', 'Barcelona_rain_1h', 'Seville_pressure', 
+                  'Seville_rain_1h', 'Bilbao_snow_3h', 'Barcelona_pressure', 
+                  'Seville_rain_3h', 'Madrid_rain_1h', 'Barcelona_rain_3h', 
+                  'Valencia_snow_3h', 'Madrid_weather_id', 'Barcelona_weather_id', 
+                  'Bilbao_pressure', 'Seville_weather_id', 'Valencia_pressure', 
+                  'Seville_temp_max', 'Madrid_pressure', 'Bilbao_weather_id', 
+                  'Valencia_humidity', 'Barcelona_temp_min', 'Bilbao_temp_max']
 
     # This conditional statement checks if the response variable is present in the supplied data and the drop it if present
     if 'load_shortfall_3h' in feature_vector_df.columns:
         y = feature_vector_df[['load_shortfall_3h']]
-        feature_vector_df = feature_vector_df.drop('load_shortfall_3h',axis=1)
+        feature_vector_df = feature_vector_df.drop('load_shortfall_3h', axis=1)
 
-    predict_vector = feature_vector_df
+    predict_vector = feature_vector_df[final_features]
     # ------------------------------------------------------------------------
 
     return predict_vector
