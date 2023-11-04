@@ -63,7 +63,7 @@ The dataset contains 47 features and 1 target. The features include the time and
  From the Exploratory Data Analysis, the weekly three-hourly load shortfall tend to show a trend which is observable in the monthly data as well as shown in the figure below
 
 
- <img src="images/electricity-pylon.jpg" alt="Image Description" width ="800" height="400">
+ <img src="images/load_shortfall_per_month.JPG" alt="Image Description" width ="800" height="400">
 
 
 
@@ -72,6 +72,13 @@ The dataset contains 47 features and 1 target. The features include the time and
  - Split the train dataset by city to have a view of the impact of city-specific features.
  - Evaluated the correlation of the different features with the output variable.
  - Checked for multicollinearity among the features.
+
+
+<img src="images/pairwise_corr_all_features.png" alt="Image Description" width ="800" height="400">
+
+The image above is a heatmap showing the pairwise correlation between all independent variables and it can be seen that there are traces of multicollinearity.
+
+
 
 A train-test-split of 34% was used as it gave the best performance for the data. Linear regression, LASSO regression and Random forest regression were the three regression models that were trained on the data and the performance of all three models were assessed using RMSE and R2_score.
 
