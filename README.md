@@ -100,6 +100,8 @@ Figure 5: Heatmap of Highly correlated Independent variables
 
 <br>
 
+<br>
+
 <img src="images/lineplots.png" alt="Image Description" width ="800" height="400">
 
 Figure 6: Lineplots of Highly correlated Independent variables
@@ -109,13 +111,19 @@ Figure 6: Lineplots of Highly correlated Independent variables
 From the Figure 5 and Figure 6, the temperature features can be seen to follow similar trends and therefore exhibit high multicollinearity.
 This problem of high multicollinearity was later resolved using Variance Inflation Factor (VIF).
 
+<br>
+
 A train-test-split of 34% was used as it gave the best performance for the data. Linear regression, LASSO regression and Random forest regression were the three regression models that were trained on the data and the performance of all three models were assessed using RMSE and R2_score.
+
+<br>
 
 The predicted three-hourly load shortfall had the following summary statistics:
  - Mean load shortfall of 10,545kWh
  - A maximum load shortfall of 20,492kWh
  - A negative minimum load shortfall of 257kWh
  - The Median load shortfall is 10,891kWh
+
+<br>
 
 ## Model Evaluation
 
@@ -125,7 +133,9 @@ The evaluation metric for the Kaggle competition was Root Mean Square Error (RMS
 
 The r-squared score was used to track the performance of the model during training. The R-squared score is a statistical measure used in regression analysis to assess the goodness of fit of a regression model. It quantifies the proportion of the variance in the dependent variable (the target) that is explained by the independent variables (the predictors) in the model.
 
-The R2 score typically ranges from 0 to 1,
+The R2 score typically ranges from 0 to 1
+
+<br>
 
 <br>
 
@@ -137,11 +147,13 @@ Figure 7: Model Comparison.
 
 After comparison of the different models which is shown in the figure above, random forest was selected as it gave the best performance among the tested models using the RMSE.
 
+<br>
 
 ## Kaggle Submission
 
 The random forest model was used to make a submission on Kaggle for the [Spain Electricity Shortfall challenge](https://www.kaggle.com/competitions/spain-electricity-shortfall-challenge-2022/leaderboard) where my team was able to attain an 8th position on the leaderboard after a lot of fine-tuning of the model.
 
+<br>
 
 ## Model Deployment
 
