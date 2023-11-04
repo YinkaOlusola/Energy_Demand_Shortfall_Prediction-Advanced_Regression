@@ -5,3 +5,4 @@ __pycache__/
 *$py.class
 .gitignore
 old_notebooks/
+random_forest_model.pkl
