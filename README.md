@@ -60,7 +60,7 @@ The dataset contains 47 features and 1 target. The features include the time and
 <br>
 
  <img src="images/load_shortfall_per_week.JPG" alt="Image Description" width ="800" height="400">
-                Figure 2: Three-Hourly Load Shortfall per Week.
+Figure 2: Three-Hourly Load Shortfall per Week.
 <br>
 
  From the Exploratory Data Analysis, the weekly three-hourly load shortfall tend to show a trend which is observable in the monthly data as well as shown in the figure below
@@ -68,7 +68,7 @@ The dataset contains 47 features and 1 target. The features include the time and
 <br>
 
  <img src="images/load_shortfall_per_month.JPG" alt="Image Description" width ="800" height="400">
-                Figure 2: Three-Hourly Load Shortfall per Month.
+Figure 2: Three-Hourly Load Shortfall per Month.
 
 <br>
 
@@ -81,19 +81,21 @@ The dataset contains 47 features and 1 target. The features include the time and
 <br>
 
 <img src="images/pairwise_corr_all_features.png" alt="Image Description" width ="800" height="400">
-                    Figure 4: Pairwise correlation of Independent variables using Heatmap.
+Figure 4: Pairwise correlation of Independent variables using Heatmap.
+
+<br>
 
 The image above is a heatmap showing the pairwise correlation between all independent variables and it can be seen that there are traces of multicollinearity.
 
 <br>
 
 <img src="images/pairwise_corr.png" alt="Image Description" width ="800" height="400">
-                    Figure 5: Heatmap of Highly correlated Independent variables
+Figure 5: Heatmap of Highly correlated Independent variables
 
 <br>
 
 <img src="images/lineplots.png" alt="Image Description" width ="800" height="400">
-                    Figure 6: Lineplots of Highly correlated Independent variables
+Figure 6: Lineplots of Highly correlated Independent variables
 
 <br>
 
@@ -121,7 +123,7 @@ The R2 score typically ranges from 0 to 1,
 <br>
 
 <img src="images/models_comparison.png" alt="Image Description" width ="800" height="400">
-                    Figure 7: Model Comparison.
+Figure 7: Model Comparison.
 
 <br>
 
