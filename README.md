@@ -56,16 +56,19 @@ The dataset contains 47 features and 1 target. The features include the time and
  - temp_max
  - temp
 
+<br>
 
  <img src="images/load_shortfall_per_week.JPG" alt="Image Description" width ="800" height="400">
 
+<br>
 
  From the Exploratory Data Analysis, the weekly three-hourly load shortfall tend to show a trend which is observable in the monthly data as well as shown in the figure below
 
+<br>
 
  <img src="images/load_shortfall_per_month.JPG" alt="Image Description" width ="800" height="400">
 
-
+<br>
 
 ## Feature Engineering and Model Training
 
@@ -73,6 +76,7 @@ The dataset contains 47 features and 1 target. The features include the time and
  - Evaluated the correlation of the different features with the output variable.
  - Checked for multicollinearity among the features.
 
+<br>
 
 <img src="images/pairwise_corr_all_features.png" alt="Image Description" width ="800" height="400">
 
