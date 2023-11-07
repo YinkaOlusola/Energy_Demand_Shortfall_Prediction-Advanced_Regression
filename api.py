@@ -4,11 +4,6 @@
 
     Author: Explore Data Science Academy.
 
-    Note:
-    ---------------------------------------------------------------------
-    Please follow the instructions provided within the README.md file
-    located within this directory for guidance on how to use this script
-    correctly.
     ---------------------------------------------------------------------
 
     Description: This file instantiates a Flask webserver
@@ -29,8 +24,7 @@ app = Flask(__name__)
 
 # Load our model into memory.
 # Please update this path to reflect your own trained model.
-static_model = load_model(
-    path_to_model='random_forest_model.pkl')
+static_model = load_model(path_to_model='random_forest_model.pkl')
 
 print ('-'*40)
 print ('Model successfully loaded')
